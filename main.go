@@ -1,9 +1,13 @@
 package main
 
-import "bitprice/server"
+import (
+	"bitprice/web"
+	"log"
+)
 
 const port = 8080
 
 func main() {
-	server.StartPriceServer(port)
+	log.Println("Booting web server")
+	web.StartPriceServer(port)
 }
